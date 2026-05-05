@@ -267,91 +267,6 @@ function init() {
     }
   );
 
-  /* ──────────────────────────────────────
-     MENU SECTION
-  ────────────────────────────────────── */
-  gsap.fromTo('.menu__header > *',
-    { opacity: 0, y: 24 },
-    {
-      opacity: 1, y: 0,
-      duration: 0.7, ease: 'power3.out',
-      stagger: 0.1,
-      scrollTrigger: { trigger: '.menu__header', start: 'top 80%' }
-    }
-  );
-
-  gsap.fromTo('.menu__filter',
-    { opacity: 0, scale: 0.9, y: 10 },
-    {
-      opacity: 1, scale: 1, y: 0,
-      duration: 0.5, ease: 'back.out(1.5)',
-      stagger: 0.07,
-      scrollTrigger: { trigger: '.menu__filters', start: 'top 85%' }
-    }
-  );
-
-  function animateVisibleCards() {
-    const visibleCards = gsap.utils.toArray('.product-card:not(.is-hidden)');
-    gsap.fromTo(visibleCards,
-      { opacity: 0, y: 40, scale: 0.95 },
-      {
-        opacity: 1, y: 0, scale: 1,
-        duration: 0.6, ease: 'power3.out',
-        stagger: 0.08,
-      }
-    );
-  }
-
-  // Initial card animation on scroll
-  ScrollTrigger.create({
-    trigger: '.menu__grid',
-    start: 'top 80%',
-    once: true,
-    onEnter: animateVisibleCards,
-  });
-
-  /* ──────────────────────────────────────
-     MENU FILTER TABS
-  ────────────────────────────────────── */
-  const filterBtns = document.querySelectorAll('.menu__filter');
-  const productCards = document.querySelectorAll('.product-card');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Update active state
-      filterBtns.forEach(b => {
-        b.classList.remove('menu__filter--active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('menu__filter--active');
-      btn.setAttribute('aria-selected', 'true');
-
-      const filter = btn.dataset.filter;
-
-      // Hide/show with GSAP
-      const toHide = [...productCards].filter(c =>
-        filter !== 'all' && c.dataset.category !== filter
-      );
-      const toShow = [...productCards].filter(c =>
-        filter === 'all' || c.dataset.category === filter
-      );
-
-      // Hide
-      gsap.to(toHide, {
-        opacity: 0, scale: 0.9, y: -10,
-        duration: 0.25, ease: 'power2.in',
-        onComplete() {
-          toHide.forEach(c => c.classList.add('is-hidden'));
-          // Animate newly shown cards
-          toShow.forEach(c => c.classList.remove('is-hidden'));
-          gsap.fromTo(toShow,
-            { opacity: 0, scale: 0.9, y: 20 },
-            { opacity: 1, scale: 1, y: 0, duration: 0.4, ease: 'power3.out', stagger: 0.06 }
-          );
-        }
-      });
-    });
-  });
 
   /* ──────────────────────────────────────
      GALLERY SECTION
@@ -474,32 +389,6 @@ function init() {
       const navH = document.getElementById('nav')?.offsetHeight ?? 72;
       const top  = target.getBoundingClientRect().top + window.scrollY - navH;
       window.scrollTo({ top, behavior: 'smooth' });
-    });
-  });
-
-  /* ──────────────────────────────────────
-     CARD — keyboard enter/space support
-  ────────────────────────────────────── */
-  document.querySelectorAll('.product-card').forEach(card => {
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        card.querySelector('button')?.click();
-      }
-    });
-  });
-
-  /* ──────────────────────────────────────
-     PRODUCT INQUIRE — simple handler
-  ────────────────────────────────────── */
-  document.querySelectorAll('.product-card .btn--small').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const card = btn.closest('.product-card');
-      const name = card?.querySelector('.product-card__name')?.textContent ?? 'this product';
-      const msg  = encodeURIComponent(`สวัสดีครับ ต้องการสอบถามเกี่ยวกับ ${name} - Hello, I'd like to ask about ${name}`);
-      // Opens WhatsApp — update number when real info is available
-      window.open(`https://wa.me/66923904811?text=${msg}`, '_blank', 'noopener');
     });
   });
 

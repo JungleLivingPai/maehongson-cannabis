@@ -54,11 +54,7 @@
           <span class="t-en">About</span>
           <span class="t-th">เกี่ยวกับเรา</span>
         </a></li>
-        <li><a href="#menu" class="nav__link">
-          <span class="t-en">Menu</span>
-          <span class="t-th">เมนู</span>
-        </a></li>
-        <li><a href="#gallery" class="nav__link">
+<li><a href="#gallery" class="nav__link">
           <span class="t-en">Gallery</span>
           <span class="t-th">แกลเลอรี</span>
         </a></li>
@@ -89,11 +85,7 @@
 
       <div class="hero__content">
         <div class="hero__actions">
-          <a href="#menu" class="btn btn--primary">
-            <span class="t-en">View Menu</span>
-            <span class="t-th">ดูเมนู</span>
-          </a>
-          <a href="#contact" class="btn btn--ghost">
+<a href="#contact" class="btn btn--ghost">
             <span class="t-en">Find Us</span>
             <span class="t-th">หาเรา</span>
           </a>
@@ -180,237 +172,6 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════════════
-         MENU / PRODUCTS
-    ═══════════════════════════════════════ -->
-    <section class="menu" id="menu" aria-labelledby="menu-heading">
-      <div class="container">
-        <div class="menu__header">
-          <p class="section-eyebrow">เมนูของเรา · Our Menu</p>
-          <h2 class="section-heading" id="menu-heading">
-            Curated Selection<br /><em>Crafted for You</em>
-          </h2>
-          <p class="menu__intro">All products are lab-tested for purity and potency. ผลิตภัณฑ์ทุกชนิดผ่านการตรวจสอบมาตรฐาน</p>
-        </div>
-
-        <!-- Filter tabs -->
-        <div class="menu__filters" role="tablist" aria-label="Product categories">
-          <button class="menu__filter menu__filter--active" role="tab" aria-selected="true" data-filter="all">ทั้งหมด · All</button>
-          <button class="menu__filter" role="tab" aria-selected="false" data-filter="flower">🌸 Flower</button>
-          <button class="menu__filter" role="tab" aria-selected="false" data-filter="pre-roll">🚬 Pre-rolls</button>
-          <button class="menu__filter" role="tab" aria-selected="false" data-filter="edible">🍬 Edibles</button>
-          <button class="menu__filter" role="tab" aria-selected="false" data-filter="wellness">💚 Wellness</button>
-        </div>
-
-        <div class="menu__grid" id="menuGrid" role="tabpanel">
-
-          <!-- Flower cards -->
-          <article class="product-card" data-category="flower" tabindex="0">
-            <div class="product-card__badge product-card__badge--sativa">Sativa</div>
-            <div class="product-card__img">
-              <div class="product-card__img-bg product-card__img-bg--green"></div>
-              <div class="product-card__leaf-icon" aria-hidden="true">🌿</div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Thai Sunrise</h3>
-              <p class="product-card__origin">Northern Thailand Heritage</p>
-              <div class="product-card__tags">
-                <span>Energizing</span><span>Creative</span><span>Uplifting</span>
-              </div>
-              <div class="product-card__thc">THC 22% · CBD 0.5%</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">฿120 <small>/ gram</small></span>
-                <button class="btn btn--small" aria-label="Inquire about Thai Sunrise">สอบถาม · Inquire</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="flower" tabindex="0">
-            <div class="product-card__badge product-card__badge--indica">Indica</div>
-            <div class="product-card__img">
-              <div class="product-card__img-bg product-card__img-bg--purple"></div>
-              <div class="product-card__leaf-icon" aria-hidden="true">🍃</div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Mist Valley OG</h3>
-              <p class="product-card__origin">House Signature Strain</p>
-              <div class="product-card__tags">
-                <span>Relaxing</span><span>Sleep</span><span>Calm</span>
-              </div>
-              <div class="product-card__thc">THC 24% · CBD 1%</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">฿150 <small>/ gram</small></span>
-                <button class="btn btn--small" aria-label="Inquire about Mist Valley OG">สอบถาม · Inquire</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="flower" tabindex="0">
-            <div class="product-card__badge product-card__badge--hybrid">Hybrid</div>
-            <div class="product-card__img">
-              <div class="product-card__img-bg product-card__img-bg--gold"></div>
-              <div class="product-card__leaf-icon" aria-hidden="true">✨</div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Golden Temple</h3>
-              <p class="product-card__origin">Premium Import · Lab Verified</p>
-              <div class="product-card__tags">
-                <span>Balanced</span><span>Happy</span><span>Focus</span>
-              </div>
-              <div class="product-card__thc">THC 20% · CBD 2%</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">฿180 <small>/ gram</small></span>
-                <button class="btn btn--small" aria-label="Inquire about Golden Temple">สอบถาม · Inquire</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="flower" tabindex="0">
-            <div class="product-card__badge product-card__badge--cbd">High CBD</div>
-            <div class="product-card__img">
-              <div class="product-card__img-bg product-card__img-bg--teal"></div>
-              <div class="product-card__leaf-icon" aria-hidden="true">🌱</div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Lotus Calm</h3>
-              <p class="product-card__origin">Wellness Collection</p>
-              <div class="product-card__tags">
-                <span>Anxiety Relief</span><span>Gentle</span><span>Wellness</span>
-              </div>
-              <div class="product-card__thc">THC 8% · CBD 12%</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">฿100 <small>/ gram</small></span>
-                <button class="btn btn--small" aria-label="Inquire about Lotus Calm">สอบถาม · Inquire</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Pre-rolls -->
-          <article class="product-card" data-category="pre-roll" tabindex="0">
-            <div class="product-card__badge product-card__badge--sativa">Sativa</div>
-            <div class="product-card__img">
-              <div class="product-card__img-bg product-card__img-bg--green"></div>
-              <div class="product-card__leaf-icon" aria-hidden="true">🚬</div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Mountain Pre-Roll</h3>
-              <p class="product-card__origin">Thai Sunrise · 1g</p>
-              <div class="product-card__tags">
-                <span>Ready to go</span><span>Pure</span>
-              </div>
-              <div class="product-card__thc">THC 22%</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">฿180 <small>/ each</small></span>
-                <button class="btn btn--small" aria-label="Inquire about Mountain Pre-Roll">สอบถาม · Inquire</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="pre-roll" tabindex="0">
-            <div class="product-card__badge product-card__badge--hybrid">Hybrid</div>
-            <div class="product-card__img">
-              <div class="product-card__img-bg product-card__img-bg--gold"></div>
-              <div class="product-card__leaf-icon" aria-hidden="true">💛</div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Temple Pack</h3>
-              <p class="product-card__origin">Golden Temple · 3×0.5g</p>
-              <div class="product-card__tags">
-                <span>Best Value</span><span>Share Pack</span>
-              </div>
-              <div class="product-card__thc">THC 20%</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">฿350 <small>/ pack</small></span>
-                <button class="btn btn--small" aria-label="Inquire about Temple Pack">สอบถาม · Inquire</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Edibles -->
-          <article class="product-card" data-category="edible" tabindex="0">
-            <div class="product-card__badge product-card__badge--indica">Indica</div>
-            <div class="product-card__img">
-              <div class="product-card__img-bg product-card__img-bg--purple"></div>
-              <div class="product-card__leaf-icon" aria-hidden="true">🍬</div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Mango Dream Gummies</h3>
-              <p class="product-card__origin">Thai Mango Flavour · 10mg each</p>
-              <div class="product-card__tags">
-                <span>Slow Release</span><span>Discreet</span>
-              </div>
-              <div class="product-card__thc">10mg THC per piece</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">฿250 <small>/ pack 5pc</small></span>
-                <button class="btn btn--small" aria-label="Inquire about Mango Dream Gummies">สอบถาม · Inquire</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="edible" tabindex="0">
-            <div class="product-card__badge product-card__badge--hybrid">Hybrid</div>
-            <div class="product-card__img">
-              <div class="product-card__img-bg product-card__img-bg--teal"></div>
-              <div class="product-card__leaf-icon" aria-hidden="true">🍫</div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Dark Cacao Bar</h3>
-              <p class="product-card__origin">Belgian Chocolate · 5mg each</p>
-              <div class="product-card__tags">
-                <span>Microdose</span><span>Gourmet</span>
-              </div>
-              <div class="product-card__thc">5mg THC per square</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">฿300 <small>/ bar</small></span>
-                <button class="btn btn--small" aria-label="Inquire about Dark Cacao Bar">สอบถาม · Inquire</button>
-              </div>
-            </div>
-          </article>
-
-          <!-- Wellness -->
-          <article class="product-card" data-category="wellness" tabindex="0">
-            <div class="product-card__badge product-card__badge--cbd">CBD</div>
-            <div class="product-card__img">
-              <div class="product-card__img-bg product-card__img-bg--teal"></div>
-              <div class="product-card__leaf-icon" aria-hidden="true">💚</div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">CBD Tincture Oil</h3>
-              <p class="product-card__origin">1000mg CBD · 30ml</p>
-              <div class="product-card__tags">
-                <span>Daily Wellness</span><span>Non-Psychoactive</span>
-              </div>
-              <div class="product-card__thc">CBD 1000mg · THC &lt;0.2%</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">฿900 <small>/ bottle</small></span>
-                <button class="btn btn--small" aria-label="Inquire about CBD Tincture Oil">สอบถาม · Inquire</button>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card" data-category="wellness" tabindex="0">
-            <div class="product-card__badge product-card__badge--cbd">Topical</div>
-            <div class="product-card__img">
-              <div class="product-card__img-bg product-card__img-bg--gold"></div>
-              <div class="product-card__leaf-icon" aria-hidden="true">🧴</div>
-            </div>
-            <div class="product-card__body">
-              <h3 class="product-card__name">Mountain Balm</h3>
-              <p class="product-card__origin">Hemp + Lemongrass Topical</p>
-              <div class="product-card__tags">
-                <span>Pain Relief</span><span>Natural</span>
-              </div>
-              <div class="product-card__thc">500mg CBD · No high</div>
-              <div class="product-card__footer">
-                <span class="product-card__price">฿450 <small>/ jar</small></span>
-                <button class="btn btn--small" aria-label="Inquire about Mountain Balm">สอบถาม · Inquire</button>
-              </div>
-            </div>
-          </article>
-
-        </div><!-- /menu__grid -->
-      </div>
-    </section>
 
     <!-- ═══════════════════════════════════════
          EXPERIENCE BANNER
@@ -607,7 +368,6 @@
           <strong>Quick Links</strong>
           <nav aria-label="Footer navigation">
             <a href="#about">About Us</a>
-            <a href="#menu">Our Menu</a>
             <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
           </nav>
