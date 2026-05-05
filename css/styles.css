@@ -481,12 +481,26 @@ span.t-en, span.t-th { }
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center 15%;
+  background-position: center 20%;
   background-repeat: no-repeat;
   opacity: 0;
   will-change: opacity;
 }
 .hero__slide:first-child { opacity: 1; }
+
+/* Mobile — portrait phones: push focal point higher so the sign stays in frame */
+@media (max-width: 767px) {
+  .hero__slide {
+    background-position: center 12%;
+  }
+}
+
+/* Wide desktop — keep sign centred, not pushed to very top */
+@media (min-width: 1280px) {
+  .hero__slide {
+    background-position: center 25%;
+  }
+}
 
 .hero__overlay {
   position: absolute;
