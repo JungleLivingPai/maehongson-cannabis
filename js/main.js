@@ -150,6 +150,30 @@ function init() {
   });
 
   /* ──────────────────────────────────────
+     HERO SLIDESHOW
+  ────────────────────────────────────── */
+  initHeroSlideshow();
+
+  function initHeroSlideshow() {
+    const slides = gsap.utils.toArray('.hero__slide');
+    if (slides.length <= 1) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let current = 0;
+    const INTERVAL = 5;
+
+    function cycle() {
+      const prev = current;
+      current = (current + 1) % slides.length;
+      gsap.to(slides[prev], { opacity: 0, duration: 1.5, ease: 'power2.inOut' });
+      gsap.to(slides[current], { opacity: 1, duration: 1.5, ease: 'power2.inOut' });
+      gsap.delayedCall(INTERVAL, cycle);
+    }
+
+    gsap.delayedCall(INTERVAL, cycle);
+  }
+
+  /* ──────────────────────────────────────
      HERO ENTRANCE
   ────────────────────────────────────── */
   const heroDelay = sessionStorage.getItem('mg_age_ok') ? 0.3 : 0.8;
@@ -475,7 +499,7 @@ function init() {
       const name = card?.querySelector('.product-card__name')?.textContent ?? 'this product';
       const msg  = encodeURIComponent(`สวัสดีครับ ต้องการสอบถามเกี่ยวกับ ${name} - Hello, I'd like to ask about ${name}`);
       // Opens WhatsApp — update number when real info is available
-      window.open(`https://wa.me/66XXXXXXXXX?text=${msg}`, '_blank', 'noopener');
+      window.open(`https://wa.me/66923904811?text=${msg}`, '_blank', 'noopener');
     });
   });
 
