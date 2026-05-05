@@ -50,6 +50,10 @@
       </button>
 
       <ul class="nav__menu" id="navMenu" role="list">
+        <li><a href="#menu" class="nav__link">
+          <span class="t-en">Menu</span>
+          <span class="t-th">เมนู</span>
+        </a></li>
         <li><a href="#about" class="nav__link">
           <span class="t-en">About</span>
           <span class="t-th">เกี่ยวกับเรา</span>
@@ -85,7 +89,11 @@
 
       <div class="hero__content">
         <div class="hero__actions">
-<a href="#contact" class="btn btn--ghost">
+          <a href="#menu" class="btn btn--primary">
+            <span class="t-en">View Menu</span>
+            <span class="t-th">ดูเมนู</span>
+          </a>
+          <a href="#contact" class="btn btn--ghost">
             <span class="t-en">Find Us</span>
             <span class="t-th">หาเรา</span>
           </a>
@@ -172,6 +180,36 @@
       </div>
     </section>
 
+    <!-- ═══════════════════════════════════════
+         MENU / PRODUCTS
+    ═══════════════════════════════════════ -->
+    <section class="menu" id="menu" aria-labelledby="menu-heading">
+      <div class="container">
+        <div class="menu__header">
+          <p class="section-eyebrow">เมนูของเรา · Our Menu</p>
+          <h2 class="section-heading" id="menu-heading">
+            Curated Selection<br /><em>Crafted for You</em>
+          </h2>
+          <p class="menu__intro">All products are lab-tested for purity and potency. ผลิตภัณฑ์ทุกชนิดผ่านการตรวจสอบมาตรฐาน</p>
+        </div>
+
+        <div class="menu__instore">
+          <div class="menu__instore-icon" aria-hidden="true">🌿</div>
+          <h3 class="menu__instore-title">
+            <span class="t-en">Come Visit Us In Store</span>
+            <span class="t-th">มาเยี่ยมชมเราที่ร้าน</span>
+          </h3>
+          <p class="menu__instore-body">
+            <span class="t-en">Our full selection of premium flower, pre-rolls, edibles &amp; wellness products is available in store. We look forward to seeing you.</span>
+            <span class="t-th">สินค้าทั้งหมดของเราพร้อมให้บริการในร้าน ยินดีต้อนรับทุกท่าน</span>
+          </p>
+          <a href="#contact" class="btn btn--primary">
+            <span class="t-en">Find Us · Hours &amp; Location</span>
+            <span class="t-th">ดูที่อยู่และเวลาเปิด</span>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- ═══════════════════════════════════════
          EXPERIENCE BANNER
@@ -368,6 +406,7 @@
           <strong>Quick Links</strong>
           <nav aria-label="Footer navigation">
             <a href="#about">About Us</a>
+            <a href="#menu">Our Menu</a>
             <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
           </nav>
